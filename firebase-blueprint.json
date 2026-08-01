@@ -1,0 +1,61 @@
+{
+  "entities": {
+    "organizations": {
+      "title": "Organization",
+      "description": "Enterprise tenant accounts",
+      "properties": {
+        "name": { "type": "string" },
+        "industry": { "type": "string" },
+        "timezone": { "type": "string" },
+        "currency": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["name"]
+    },
+    "users": {
+      "title": "User",
+      "description": "Members and administrators",
+      "properties": {
+        "orgId": { "type": "string" },
+        "email": { "type": "string" },
+        "name": { "type": "string" },
+        "role": { "type": "string" },
+        "department": { "type": "string" },
+        "jobTitle": { "type": "string" },
+        "phone": { "type": "string" },
+        "accessGroup": { "type": "string" },
+        "status": { "type": "string" }
+      },
+      "required": ["email", "name", "role"]
+    },
+    "resources": {
+      "title": "Resource",
+      "description": "Bookable rooms, desks, equipment, vehicles, etc.",
+      "properties": {
+        "orgId": { "type": "string" },
+        "name": { "type": "string" },
+        "type": { "type": "string" },
+        "building": { "type": "string" },
+        "capacity": { "type": "number" },
+        "accessGroup": { "type": "string" },
+        "status": { "type": "string" },
+        "requiresApproval": { "type": "boolean" }
+      },
+      "required": ["name", "type", "building"]
+    },
+    "bookings": {
+      "title": "Booking",
+      "description": "Resource reservation records",
+      "properties": {
+        "orgId": { "type": "string" },
+        "resourceId": { "type": "string" },
+        "requesterId": { "type": "string" },
+        "title": { "type": "string" },
+        "startTime": { "type": "string" },
+        "endTime": { "type": "string" },
+        "status": { "type": "string" }
+      },
+      "required": ["resourceId", "startTime", "endTime"]
+    }
+  }
+}

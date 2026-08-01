@@ -1,0 +1,6 @@
+{
+  "name": "SpaceSync",
+  "description": "Campus and Office Resource Booking Platform - Enterprise resource management for desks, rooms, labs, and equipment.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
